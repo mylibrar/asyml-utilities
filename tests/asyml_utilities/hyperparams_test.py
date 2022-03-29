@@ -20,7 +20,7 @@ import pickle
 import tempfile
 import unittest
 
-from texar.torch.hyperparams import HParams
+from asyml_utilities.hyperparams import HParams
 
 
 class HParamsTest(unittest.TestCase):

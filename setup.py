@@ -1,8 +1,7 @@
 import setuptools
+from pathlib import Path
 
-long_description = """
-Some shared utilities across multiple ASYML projects.
-"""
+long_description = (Path(__file__).parent / "README.md").read_text()
 
 setuptools.setup(
     name="asyml-utilities",
@@ -11,6 +10,7 @@ setuptools.setup(
 
     description="Shared Utilities for ASYML Projects",
     long_description=long_description,
+    long_description_content_type='text/markdown',
     license='Apache License Version 2.0',
 
     packages=setuptools.find_packages(),

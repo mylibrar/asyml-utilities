@@ -278,10 +278,11 @@ class HParams:
             else:
                 try:
                     parsed_hparams[name] = type(default_value)(value)
-                except TypeError:
+                except TypeError as err:
                     raise ValueError(
                         "Hyperparameter '%s' must have type %s, got %s" %
-                        (name, _type_name(default_value), _type_name(value)))
+                        (name, _type_name(default_value), _type_name(value))
+                    ) from err
 
         return parsed_hparams
 
