@@ -2,8 +2,6 @@ name: PYPI
 
 on:
   push:
-    tags:
-      - v*
   pull_request:
     branches: [ main ]
   # Trigger this workflow manually from the Actions tab
